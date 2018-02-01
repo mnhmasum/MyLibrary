@@ -16,7 +16,7 @@ public class Vibration {
             @Override
             public void run() {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    VibrationEffect.createOneShot(1000, 1);
+                    VibrationEffect.createOneShot(duration, 1);
                 } else {
                     Vibrator v = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
                     v.vibrate(duration);
